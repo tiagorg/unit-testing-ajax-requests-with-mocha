@@ -1,6 +1,8 @@
 Ajax requests can easily go wrong. You can't guarantee the connection and the server always work correctly. They are also often used to send user input to the server and back, so it's vital the data is handled correctly.
 
-But testing them can be tricky. It's asynchronous, and a good unit test must be isolated, so how can we do that when the code talks to the server?
+But testing them can be tricky. Per definition, UNIT testing should focus on each UNIT at a time, which means that the component under test must be tested out apart from any other components it might relate to. In order to achieve such level of isolation, such components should be mocked out, in order to provide a reliable and consistent environment for stressing out every capability of our component without external interferences.
+
+Then, let's consider unit testing the component which fires off Ajax requests. They are asynchronous, and a good unit test must be isolated, so how can we do that when the code talks to the server?
 
 Let's take a look at some examples to learn how to test Ajax requests with ease.
 
